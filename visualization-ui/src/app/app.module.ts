@@ -3,8 +3,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule }   from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { HomePageComponent } from './home-page/home-page.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { LandingPageComponent } from './pages/landing-page/landing-page.component';
 
 const routes = [
   {
