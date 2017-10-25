@@ -1,3 +1,54 @@
-<h1>
-  Welcome to Change Detection and Notification Visualization Service
-</h1>
+<div class="">
+  <div class="jumbotron">
+    <h1 class="text-center">
+      Text Diff
+    </h1>
+  </div>
+
+</div>
+<div id="display"></div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6">
+      <h3>Base Text</h3>
+      <textarea style="border: solid black 1px; border-radius: 5px; min-height: 100px" (keyup)="diffUsingJS()"
+                id="baseText" class="editor-area" rows="10"></textarea>
+    </div>
+    <div class="col-sm-6">
+      <h3>New Text</h3>
+      <textarea style="border: solid black 1px; border-radius: 5px; min-height: 100px" (keyup)="diffUsingJS()"
+                id="newText" class="editor-area" rows="10"></textarea>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-3">
+      <div class="radio">
+        <label><input checked type="radio" name="optradio" (change)="selectDiffType('char')">Characters</label>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="radio">
+        <label><input type="radio" name="optradio" (change)="selectDiffType('word')">Words</label>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="radio">
+        <label><input type="radio" name="optradio" (change)="selectDiffType('line')">Lines</label>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="radio">
+        <label><input type="radio" name="optradio" (change)="selectDiffType('sentence')">Sentences</label>
+      </div>
+    </div>
+  </div>
+  <div class="col-sm-12">
+    <div align="right">
+      <span class="btn btn-info" (click)="diffUsingJS()">Press</span>
+    </div>
+  </div>
+  <hr>
+  <h3>Diff</h3>
+  <pre style="border: solid black 1px; border-radius: 5px; min-height: 100px; text-wrap: normal" class="col-sm-12" id="diffoutput"></pre>
+</div>
